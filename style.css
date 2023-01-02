@@ -1,0 +1,591 @@
+Adeebogaili
+
+/
+
+VSchoolAssignments
+
+Public
+
+Code
+
+Issues
+
+Pull requests
+
+Actions
+
+Projects
+
+Wiki
+
+Security
+
+Insights
+
+Settings
+
+VSchoolAssignments/level 2/axios-todo-project/style.css
+
+@Adeebogaili
+
+Adeebogaili updated axios code
+
+ 1 contributor
+
+321 lines (278 sloc)  5.64 KB
+
+/* BASE CSS */
+
+:root {
+
+    --squidink-black: #2e2d2b;
+
+    --mushroom-grey: #565553;
+
+    --tahini-grey: #f8f7f5;
+
+    --white: #ffffff;
+
+    --chard-green: #004e36;
+
+    --local-hover: #c0303f;
+
+    --avocado-green: #2c8746;
+
+}
+
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    height: 100vh;
+
+    background-color: var(--chard-green);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+h1 {
+
+    font-size: 3rem;
+
+    font-weight: 50;
+
+    font-family: 'Hind', sans-serif;
+
+    margin: 1rem 0 3rem;
+
+    text-align: center;
+
+    color: var(--white);
+
+}
+
+/* FORM */
+
+.form {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.styling {
+
+    font-weight: 800;
+
+    color: var(--avocado-green);
+
+    margin-right: 10px;
+
+}
+
+/* INPUT FIELDS STYLING */
+
+.titleInput,
+
+.desInput,
+
+.imgUrl {
+
+    padding: 0.5rem 1rem;
+
+    height: 50px;
+
+    min-width: 5%;
+
+    outline: none;
+
+    background-color: var(--white);
+
+    font-size: 1.15rem;
+
+    margin: 0.25rem;
+
+    border-radius: 25px;
+
+    border: none;
+
+}
+
+/* ITEM PRICE INPUT */
+
+.itemPrice {
+
+    padding: 0.5rem 1rem;
+
+    height: 50px;
+
+    width: 125px;
+
+    outline: none;
+
+    background-color: var(--white);
+
+    font-size: 1.15rem;
+
+    margin: 0.25rem;
+
+    border-radius: 25px;
+
+    border: none;
+
+}
+
+/* ITEM PRICE LIST */
+
+.price-list {
+
+    color: var(--mushroom-grey);
+
+    font-size: 1.15rem;
+
+}
+
+.price-list::before {
+
+    content: "$";
+
+}
+
+/* SUBMIT BUTTON */
+
+.submitBtn {
+
+    font-size: 1.5625rem;
+
+    height: 50px;
+
+    width: 50px;
+
+    margin: .025rem;
+
+    border-radius: 25px;
+
+    border: none;
+
+    outline: none;
+
+    color: var(--avocado-green);
+
+    ;
+
+    background-color: var(--chard-green);
+
+    border: 2px solid var(--avocado-green);
+
+    ;
+
+    cursor: pointer;
+
+}
+
+.submitBtn:hover {
+
+    background-color: var(--avocado-green);
+
+    ;
+
+    color: var(--white);
+
+    border: 3px solid var(--chard-green);
+
+}
+
+/* CONTAINER FOR CREATED ITEMS BY DOM */
+
+.container {
+
+    background-color: var(--white);
+
+    margin-top: 2rem;
+
+    height: 460px;
+
+    width: 40%;
+
+    border-radius: 20px;
+
+    overflow-y: scroll;
+
+}
+
+.container::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+/* LIST ITEM  */
+
+.item-list {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    border-bottom: 2px solid #F5F5F5;
+
+}
+
+.item-list:last-child {
+
+    border-bottom: none;
+
+}
+
+/* DIV TO ALIGN CHECKBOX, IMAGE, TITLE, AND DESCRIPTION TO THE LEFT */
+
+.leftWrapper {
+
+    margin-left: 20px;
+
+    display: flex;
+
+    align-items: left;
+
+}
+
+/* TITLE AND DESCRIPTION WRAPPER */
+
+.item-details {
+
+    text-align: left;
+
+}
+
+/* TITLE FIELD */
+
+.title {
+
+    color: var(--squidink-black);
+
+    font-size: 1.4rem;
+
+}
+
+/* DESCRIPTION FIELD */
+
+.description {
+
+    color: var(--mushroom-grey);
+
+    border: none;
+
+    font-size: 1.4rem;
+
+}
+
+/* BUTTONS WRAPPER */
+
+.buttons {
+
+    margin-right: 20px;
+
+}
+
+/* BUTTONS */
+
+.editBtn,
+
+.removeBtn,
+
+.saveBtn {
+
+    background-color: transparent;
+
+    border: 0;
+
+    font-size: 1.5rem;
+
+    height: 1.25rem;
+
+    min-height: 44px;
+
+    min-width: 44px;
+
+    width: 1.25rem;
+
+    cursor: pointer;
+
+    transition: all .2s ease-in-out;
+
+}
+
+.editBtn:hover,
+
+.saveBtn:hover {
+
+    color: var(--avocado-green);
+
+    transform: scale(1.3);
+
+}
+
+.editBtn:focus,
+
+.saveBtn:focus {
+
+    outline: 0;
+
+}
+
+.removeBtn:hover {
+
+    color: var(--local-hover);
+
+    transform: scale(1.3);
+
+}
+
+.removeBtn:focus {
+
+    outline: 0;
+
+}
+
+/* IMAGE URL */
+
+.imageUrl {
+
+    border: none;
+
+    height: 75px;
+
+    width: 75px;
+
+}
+
+/* CHECKBOX */
+
+.checkbox {
+
+    margin-right: 10px;
+
+    width: 1.25rem;
+
+    cursor: pointer;
+
+}
+
+.checkbox:hover {
+
+    transform: scale(1.3);
+
+}
+
+/* POPUP MODAL */
+
+.modal {
+
+    background: var(--tahini-grey);
+
+    color: var(--squidink-black);
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    border: 1px solid var(--squidink-black);
+
+    border-radius: 20px;
+
+    transition: 200ms ease-in-out;
+
+    z-index: 10;
+
+    width: 31.25rem;
+
+    max-width: 80%;
+
+}
+
+.modal.active {
+
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+/* MODAL HEADER */
+
+.modal-header {
+
+    padding: .625rem .9375rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.modal-header .popupTitle {
+
+    margin-top: 20px;
+
+    margin-left: 15px;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+}
+
+.modal-header .closeBtn {
+
+    color: var(--chard-green);
+
+    margin-right: 15px;
+
+    cursor: pointer;
+
+    border: none;
+
+    outline: none;
+
+    background: none;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+
+}
+
+.closeBtn:hover {
+
+    transform: scale(1.3);
+
+}
+
+.modal-body {
+
+    padding: .625rem .9375rem;
+
+}
+
+/* OVERLAY BACKGROUND */
+
+#overlay {
+
+    position: fixed;
+
+    opacity: 0;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    transition: 200ms ease-in-out;
+
+    background-color: rgba(0, 0, 0, .5);
+
+    pointer-events: none;
+
+}
+
+#overlay.active {
+
+    opacity: 1;
+
+    pointer-events: all;
+
+}
+
+/* POPUP FORM */
+
+.popUp-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: left;
+
+}
+
+.popUp-form input {
+
+    width: 100%;
+
+    background-color: var(--tahini-grey);
+
+    padding: 0.5rem 1rem;
+
+    height: 50px;
+
+    min-width: 5%;
+
+    outline: none;
+
+    background-color: var(--white);
+
+    font-size: 1.15rem;
+
+    margin: 0.25rem;
+
+    border-radius: 25px;
+
+    border: none;
+
+}
+
+.popUp-form:last-child {
+
+    align-items: center;
+
+}
